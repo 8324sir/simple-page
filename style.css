@@ -36,7 +36,7 @@ ul,ol{
     text-align: center;
     padding-top: 46px;
 }
-.banner >h2{
+.banner  h2{
     background: #D8D8D8;
     border-radius: 14px;
     display: inline-block;
@@ -45,6 +45,20 @@ ul,ol{
     margin-bottom: 10px;
     line-height: 34px;
     padding: 3px 0px;
+}
+.banner .one-lines-header h2{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.banner .one-lines-header{
+    display: none;
+}
+@media(min-width:500px){
+    .banner .two-lines-header{
+        display: none;
+    }
+    .banner .one-lines-header{
+    display: block;
 }
 .banner .details{
     padding-top: 16px;
@@ -60,21 +74,42 @@ ul,ol{
     border-radius: 14px;
 
 } 
+@media(min-width:500px){
+    .banner .details p{
+        max-width: none;
+        margin-left: 52px;
+        margin-right: 52px;
+    }
+}
 /*products模块*/
 .products{
     margin: 0 16px;
 }
 .products>ol{
     margin-top: 42px;
+    
 }
-.products>ol>li{}
+}
+@media(min-width:500px){
+    .products >ol{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .products>ol>li{
+    width: 50%;
+    max-width: 288px;
+    }
+    .products .product>.img{
+        max-width: 288px;
+    }
+}
 .products .product{
     margin-top: 32px;
 }
 .products .product>.img{
     background:#d8d8d8;
     border-radius:4px;
-    width:288px;
     height:180px;
 }
 .products .product>h3{
